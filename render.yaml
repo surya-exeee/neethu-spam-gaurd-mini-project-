@@ -1,0 +1,23 @@
+# render.yaml
+# -----------
+# Render Blueprint — deploys SpamGuard as a free-tier web service.
+#
+# How to use:
+#   1. Push this whole project folder to a GitHub repository.
+#   2. Go to https://dashboard.render.com  →  New  →  Blueprint.
+#   3. Connect your GitHub repo — Render reads this file automatically.
+#   4. Click "Apply" and wait ~2 minutes for the first deploy.
+#
+# The model is already trained and committed (model/*.joblib, model/metadata.json).
+# Render just installs packages and starts gunicorn — no training happens on the server.
+
+services:
+  - type: web
+    name: spamguard
+    runtime: python
+    plan: free                          # free tier — no credit card needed
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 2 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"

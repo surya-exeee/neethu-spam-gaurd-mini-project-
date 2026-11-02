@@ -1,0 +1,64 @@
+{
+  "dataset": "SMS Spam Collection",
+  "total_messages": 116,
+  "train_size": 92,
+  "test_size": 24,
+  "best_model": "Multinomial Naive Bayes",
+  "other_model": "Logistic Regression",
+  "best_metrics": {
+    "name": "Multinomial Naive Bayes",
+    "accuracy": 0.9583,
+    "precision": 0.8571,
+    "recall": 1.0,
+    "f1": 0.9231,
+    "cm": [
+      [
+        17,
+        1
+      ],
+      [
+        0,
+        6
+      ]
+    ]
+  },
+  "other_metrics": {
+    "name": "Logistic Regression",
+    "accuracy": 0.875,
+    "precision": 0.8,
+    "recall": 0.6667,
+    "f1": 0.7273,
+    "cm": [
+      [
+        17,
+        1
+      ],
+      [
+        2,
+        4
+      ]
+    ]
+  },
+  "top_spam_words": [
+    "prize",
+    "claim",
+    "text",
+    "congratulations",
+    "verify",
+    "cash",
+    "com",
+    "win",
+    "click",
+    "claim prize",
+    "new",
+    "parcel",
+    "000",
+    "won",
+    "details"
+  ],
+  "tfidf_vocab_size": 680,
+  "class_counts": {
+    "ham": 86,
+    "spam": 30
+  }
+}

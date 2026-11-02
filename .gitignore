@@ -1,0 +1,75 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.env
+
+# ── Distribution / packaging ───────────────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+
+# ── Testing & coverage ─────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ── IDE / editor ───────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Jupyter ────────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Logs & temp ────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Local secrets / environment variables ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Raw datasets (large; not needed on Render — model is pre-trained) ──────────
+data/spam.csv
+data/SMSSpamCollection
+
+# ── Scratch / one-off files generated during development ──────────────────────
+train_model_ascii.py
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DO NOT IGNORE — these files are required for the app to run on Render:
+#   model/model.joblib
+#   model/vectorizer.joblib
+#   model/metadata.json
+#
+# The practice dataset is small and harmless to include:
+#   data/sample_sms.csv
+# ─────────────────────────────────────────────────────────────────────────────
